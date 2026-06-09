@@ -1,29 +1,25 @@
-# Nguyễn Nhật Bằng
+<!-- Minimal profile README with personal info and contribution snake -->
+👋 Hi there!
 
-**AI Engineer & Data Engineering Intern**
+Welcome to my GitHub profile. Here’s a brief introduction about me.
 
-Building automation systems, intelligent agents, and optimizing data workflows. Currently studying at FPT University.
+About Me
+🔭 I'm currently working on: [your current projects]
+🌱 I'm learning: [what you're learning]
+🤝 I'm looking to collaborate on: [areas you’d like to collaborate]
+📫 How to reach me: [your preferred contact method]
+⚡ Fun fact: [something interesting about you]
+🐍 Contribution Snake
 
----
+Below is an animated representation of your contribution graph. To generate the snake images, set up the Platane/snk GitHub Action in your repository. Once generated, replace <your-username> with your GitHub username in the links below.
 
-### ✦ Currently Working On
+<!-- GitHub Contribution Snake -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/<your-username>/<your-username>/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/<your-username>/<your-username>/output/github-contribution-grid-snake.svg" />
+  <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/<your-username>/<your-username>/output/github-contribution-grid-snake.svg" />
+</picture>
 
-- **Verba** — An AI-driven meeting recognition platform.
-- **INDA** — Automated CV management and data extraction system.
-- **Tasklite** — Workflow automation and productivity workspace.
+Remember to replace <your-username> with your GitHub username and adjust the path if you save the snake file elsewhere.
 
-### ✦ Tech Stack
-
-**Languages:** `Python` `JavaScript` `SQL`  
-**AI & Automation:** `LangGraph` `n8n`  
-**Databases & Infrastructure:** `PostgreSQL` `ScyllaDB` `Docker` `Home Server Setup`
-
-### ✦ Beyond Code
-
-When I'm not writing code, I'm usually optimizing PC hardware, tinkering with self-hosted server configurations, or exploring modded game environments. 
-
----
-
-### ✦ Let's Connect
-
-[LinkedIn](https://linkedin.com/in/your-profile) ⸰ [Email](mailto:your-email@example.com) ⸰ [Portfolio](https://your-portfolio.com)
+This README includes only your personal information and the contribution snake section. Feel free to customise the bullet points and update the snake links after generating your own files.
