@@ -3,7 +3,7 @@
   <img src="Images/Banner.png" width="800" alt="Nguyen Nhat Bang - AI Engineer" />
 </p>
 
-<img src="Images/me.jpg" align="right" width="340" />
+<img src="Images/me.jpg" align="right" width="280" />
 
 My name is Nguyễn Nhật Bằng, and I go by `nhatbangweb`  While I am just starting my professional career, I have been passionately learning how to build intelligent agents and automation systems.
 
