@@ -1,16 +1,29 @@
-## Hi there 👋
+# Nguyễn Nhật Bằng
 
-<!--
-**Lilkremxxxx/Lilkremxxxx** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**AI Engineer & Data Engineering Intern**
 
-Here are some ideas to get you started:
+Building automation systems, intelligent agents, and optimizing data workflows. Currently studying at FPT University.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+### ✦ Currently Working On
+
+- **Verba** — An AI-driven meeting recognition platform.
+- **INDA** — Automated CV management and data extraction system.
+- **Tasklite** — Workflow automation and productivity workspace.
+
+### ✦ Tech Stack
+
+**Languages:** `Python` `JavaScript` `SQL`  
+**AI & Automation:** `LangGraph` `n8n`  
+**Databases & Infrastructure:** `PostgreSQL` `ScyllaDB` `Docker` `Home Server Setup`
+
+### ✦ Beyond Code
+
+When I'm not writing code, I'm usually optimizing PC hardware, tinkering with self-hosted server configurations, or exploring modded game environments. 
+
+---
+
+### ✦ Let's Connect
+
+[LinkedIn](https://linkedin.com/in/your-profile) ⸰ [Email](mailto:your-email@example.com) ⸰ [Portfolio](https://your-portfolio.com)
