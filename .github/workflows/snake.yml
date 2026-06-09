@@ -17,7 +17,7 @@ jobs:
       # Bước 2: dùng action Platane/snk để tạo file snake
       - uses: Platane/snk@v3
         with:
-          github_user_name: <tên_github_của_bạn>  # thay bằng username của bạn
+          github_user_name: Lilkremxxxx  # thay bằng username của bạn
           # những file sẽ được tạo (có thể đổi tên tuỳ ý)
           outputs: |
             dist/github-contribution-grid-snake.svg
