@@ -1,9 +1,9 @@
 <!-- Minimal profile README with personal info and contribution snake -->
 <p align="center">
-  <img src="images/Banner.png" width="800" alt="Nguyen Nhat Bang - AI Engineer" />
+  <img src="Images/Banner.png" width="800" alt="Nguyen Nhat Bang - AI Engineer" />
 </p>
 
-<img src="images/me.jpg" align="right" />
+<img src="Images/me.jpg" align="right" />
 
 My name is Nguyễn Nhật Bằng, and I go by `nhatbangweb`  While I am just starting my professional career, I have been passionately learning how to build intelligent agents and automation systems.
 
