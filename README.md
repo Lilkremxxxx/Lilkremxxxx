@@ -117,5 +117,5 @@ If you're curious about how I organize things, I actually "vibed out" and built 
 ---
 
 <p align="center">
-  <a href="https://youtu.be/UqNbBe3lVCI">🎥 How did I build this profile?</a>
+  <img src="assets/github-stats.svg" alt="Lilkremxxxx GitHub Stats" />
 </p>
