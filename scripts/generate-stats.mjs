@@ -1,10 +1,20 @@
 import fs from "node:fs";
 
-const TOKEN = process.env.GH_TOKEN;
-const USERNAME = process.env.GITHUB_USERNAME || process.env.GITHUB_REPOSITORY_OWNER;
+const TOKEN = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
+const USERNAME =
+  process.env.GITHUB_USERNAME || process.env.GITHUB_REPOSITORY_OWNER;
 
-if (!TOKEN) throw new Error("Missing GH_TOKEN");
-if (!USERNAME) throw new Error("Missing GITHUB_USERNAME");
+if (!TOKEN) {
+  throw new Error(
+    "Missing GitHub token. Set GH_TOKEN in your GitHub Actions workflow."
+  );
+}
+
+if (!USERNAME) {
+  throw new Error(
+    "Missing GitHub username. Set GITHUB_USERNAME in your GitHub Actions workflow."
+  );
+}
 
 const now = new Date();
 const year = now.getUTCFullYear();
@@ -91,13 +101,33 @@ async function graphql(query, variables) {
       "Content-Type": "application/json",
       "User-Agent": "github-profile-stats-card"
     },
-    body: JSON.stringify({ query, variables })
+    body: JSON.stringify({
+      query,
+      variables
+    })
   });
 
-  const json = await response.json();
+  const text = await response.text();
+
+  let json;
+  try {
+    json = JSON.parse(text);
+  } catch {
+    throw new Error(`GitHub API returned non-JSON response:\n${text}`);
+  }
 
   if (!response.ok || json.errors) {
-    throw new Error(JSON.stringify(json.errors || json, null, 2));
+    throw new Error(
+      JSON.stringify(
+        {
+          status: response.status,
+          statusText: response.statusText,
+          errors: json.errors || json
+        },
+        null,
+        2
+      )
+    );
   }
 
   return json.data;
@@ -131,6 +161,7 @@ function getRowIconSvg(type, x, y) {
           <path d="M0 -9 L2.6 -2.8 L9 -2.8 L3.8 1.1 L5.8 8 L0 4.2 L-5.8 8 L-3.8 1.1 L-9 -2.8 L-2.6 -2.8 Z" fill="${stroke}"/>
         </g>
       `;
+
     case "commit":
       return `
         <g transform="translate(${x} ${y})" stroke="${stroke}" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -139,6 +170,7 @@ function getRowIconSvg(type, x, y) {
           <circle cx="0" cy="0" r="4.2" fill="${stroke}" stroke="none"/>
         </g>
       `;
+
     case "pr":
       return `
         <g transform="translate(${x} ${y})" stroke="${stroke}" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -149,6 +181,7 @@ function getRowIconSvg(type, x, y) {
           <path d="M-2.7 7 H3.7 V0" />
         </g>
       `;
+
     case "review":
       return `
         <g transform="translate(${x} ${y})" stroke="${stroke}" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -156,6 +189,7 @@ function getRowIconSvg(type, x, y) {
           <circle cx="0" cy="0" r="2.4" fill="${stroke}" stroke="none"/>
         </g>
       `;
+
     case "issue":
       return `
         <g transform="translate(${x} ${y})" stroke="${stroke}" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -164,6 +198,7 @@ function getRowIconSvg(type, x, y) {
           <circle cx="0" cy="5" r="1.2" fill="${stroke}" stroke="none"/>
         </g>
       `;
+
     case "repo":
       return `
         <g transform="translate(${x} ${y})" stroke="${stroke}" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -173,6 +208,7 @@ function getRowIconSvg(type, x, y) {
           <path d="M-3.5 3.5 H1.5" />
         </g>
       `;
+
     default:
       return "";
   }
@@ -236,12 +272,36 @@ const contributedRepos = new Set([
 ]);
 
 const rows = [
-  { icon: "star", label: "Total Stars Earned:", value: totalStars },
-  { icon: "commit", label: `Total Commits (${year}):`, value: yearStats.totalCommitContributions },
-  { icon: "pr", label: "Total PRs:", value: yearStats.totalPullRequestContributions },
-  { icon: "review", label: "Total PRs Reviewed:", value: yearStats.totalPullRequestReviewContributions },
-  { icon: "issue", label: "Total Issues:", value: yearStats.totalIssueContributions },
-  { icon: "repo", label: "Contributed to (last year):", value: contributedRepos.size }
+  {
+    icon: "star",
+    label: "Total Stars Earned:",
+    value: totalStars
+  },
+  {
+    icon: "commit",
+    label: `Total Commits (${year}):`,
+    value: yearStats.totalCommitContributions
+  },
+  {
+    icon: "pr",
+    label: "Total PRs:",
+    value: yearStats.totalPullRequestContributions
+  },
+  {
+    icon: "review",
+    label: "Total PRs Reviewed:",
+    value: yearStats.totalPullRequestReviewContributions
+  },
+  {
+    icon: "issue",
+    label: "Total Issues:",
+    value: yearStats.totalIssueContributions
+  },
+  {
+    icon: "repo",
+    label: "Contributed to (last year):",
+    value: contributedRepos.size
+  }
 ];
 
 const rowSvg = rows
@@ -290,7 +350,10 @@ const svg = `
 </svg>
 `.trim();
 
-fs.mkdirSync("assets", { recursive: true });
+fs.mkdirSync("assets", {
+  recursive: true
+});
+
 fs.writeFileSync("assets/github-stats.svg", svg);
 
 console.log("Generated assets/github-stats.svg");
