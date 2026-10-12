@@ -49,12 +49,12 @@ If you're curious about how I organize things, I actually "vibed out" and built 
   <tr>
     <td valign="top" width="50%">
 
-**🎯 Leadership & Strategy**
+**🛠️ Databases & Automation**
 <br/>
-[![DevEx](https://img.shields.io/badge/Developer_Experience-FF69B4?style=for-the-badge&logo=dev.to&logoColor=white)](https://hussainweb.me/)
-[![Platform Engineering](https://img.shields.io/badge/Platform_Engineering-0052CC?style=for-the-badge&logo=atlassian&logoColor=white)](https://hussainweb.me/)
-[![Mentoring](https://img.shields.io/badge/Mentoring-00BFA5?style=for-the-badge&logo=google-classroom&logoColor=white)](https://hussainweb.me/)
-[![Architecture](https://img.shields.io/badge/Architecture-FFD700?style=for-the-badge&logo=diagrams.net&logoColor=black)](https://hussainweb.me/)
+[![PostgreSQL](https://img.shields.io/badge/postgresql-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![ScyllaDB](https://img.shields.io/badge/scylladb-6CD5E7?style=for-the-badge&logo=scylladb&logoColor=black)](https://www.scylladb.com/)
+[![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)](https://n8n.io/)
+
 
 <br/>
 
@@ -91,19 +91,6 @@ If you're curious about how I organize things, I actually "vibed out" and built 
 <br/>
 [![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/)
 
-<br/>
-
-**🛠️ Data Science & CV**
-<br/>
-
-[![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/)
-
-<br/>
-
-**🛠️ Databases & Automation**
-[![PostgreSQL](https://img.shields.io/badge/postgresql-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-[![ScyllaDB](https://img.shields.io/badge/scylladb-6CD5E7?style=for-the-badge&logo=scylladb&logoColor=black)](https://www.scylladb.com/)
-[![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)](https://n8n.io/)
 
 <br/>
 
